@@ -1,6 +1,6 @@
 #include "vp.hpp"
 
-//test
+
 int sc_main(int argc, char** argv) {
 
     Vp vp("Virtual Platform", argc, argv);
