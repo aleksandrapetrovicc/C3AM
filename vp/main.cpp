@@ -1,35 +1,17 @@
-#include "hard.hpp"
-#include "soft.hpp"
-#include "utils.hpp"
-int sc_main(int argc, char* argv[]) {
+#include "vp.hpp"
 
-    string filename = argv[1], s_iterations = argv[2];
-    int iterations;
 
-    //cout << "Please enter a filename: ";
-    //cin >> filename;
- //proba
-    Mat image = imread(filename);
-    if (image.empty()) {
-        cout << "Unable to load image, please try again." << endl;
-        exit(EXIT_FAILURE);
-    }
-    //cout << "Reduce width how many times? ";
-    //cin >> s_iterations;
+int sc_main(int argc, char** argv) {
 
-    iterations = stoi(s_iterations);
-    int rowsize = image.rows;
-    int colsize = image.cols;
+    Vp vp("Virtual Platform", argc, argv);
+    // Soft("soft", argc, argv);
+    // Ddr ddr("ddr"); 
+    sc_start(1000, sc_core::SC_NS);
 
-    // check that inputted number of iterations doesn't exceed the image size
 
-    if (iterations > colsize) {
-        cout << "Input is greater than image's width, please try again." << endl;
-        return 0;
-    }
 
-    driver(image, iterations);
-
+    return 0;
+}
 /*       
 
     Mat energy_image = createEnergyImage(image);
@@ -47,7 +29,7 @@ int sc_main(int argc, char* argv[]) {
 
     Mat cem_mat = convert_to_mat(cem_2d);
     //cout<<"1d version"<<cem_mat<<endl;
-
+    // test 
 */
 
     
@@ -80,5 +62,3 @@ int sc_main(int argc, char* argv[]) {
     cout<<"Mat CEM, final: "<<endl<<cumulative_energy_map_mat<<endl;
 // *********************************************************************************
 */
-    return 0;
-}
