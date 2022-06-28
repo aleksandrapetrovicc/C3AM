@@ -15,10 +15,9 @@ module::~module()
 
 void module::komunikacija()
 {
-    vector<int> v {1, 2, 3, 4, 5, 7};
+    vector<int> v {7, 5, 1, 3, 8};
 
-    int n = v.size();
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < v.size(); i++)
     {
         //int v = 5;
         pl_t p1;

@@ -14,7 +14,6 @@ using namespace sc_core;
 using namespace sc_dt;
 using namespace tlm;
 using namespace std;
-//using namespace cv;
 
 typedef tlm::tlm_base_protocol_types::tlm_payload_type pl_t;
 typedef tlm::tlm_base_protocol_types::tlm_phase_type ph_t;

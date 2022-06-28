@@ -9,13 +9,14 @@ class vp : public sc_core::sc_module
 {
     public:
         SC_HAS_PROCESS(vp);
-        vp(sc_core::sc_module_name name, int);
+        vp(sc_core::sc_module_name name, int, int);
         ~vp();
     
     protected:
-        module inicijator;
-        module0 cilj;
+        module m;
+        module0 m0;
         sc_fifo <int> f0;
+        sc_fifo <int> f1;
         module1 m1;
 };
 #endif
